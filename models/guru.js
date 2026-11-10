@@ -5,8 +5,8 @@ const guruSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Kode wajib diisi'],
     unique: true,
+    uppercase: true,
     trim: true,
-    uppercase: true, // disimpan huruf besar
   },
   nama: {
     type: String,
@@ -15,4 +15,4 @@ const guruSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Guru', guruSchema);
+module.exports = mongoose.model('guru', guruSchema);
